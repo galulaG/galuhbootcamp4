@@ -1,0 +1,12 @@
+<form #f="ngForm" (ngSubmit)="AddProduct(f)" action="" style="color:#155885; margin-bottom:100px;">
+  <label class="col-md-offset-3" for="">Name</label> <br>
+   <input name="Name" class="col-md-offset-3 col-md-6 noborder inputtype" type="text" ngModel><br><br>
+   <label class="col-md-offset-3" for="">Price</label> <br>
+   <input name="Price" class="col-md-offset-3 col-md-6 noborder inputtype" type="number" ngModel><br><br>
+   <label class="col-md-offset-3" for="">Profile</label> <br><br>
+   <input class="inputfile col-md-offset-3" id="Profile"style="" name="Profile" (change)="fileChange($event)" type="file" multiple >
+   
+
+     <button class="col-md-offset-8">Cancel</button>
+     <button type="submit" >Submit</button>
+ </form>
