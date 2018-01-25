@@ -8,7 +8,6 @@ import { RouterModule } from "@angular/router";
 import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { DetailComponent } from './detail/detail.component';
-import { AddimageComponent } from './addimage/addimage.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 
 @NgModule({
@@ -16,14 +15,15 @@ import { AddproductComponent } from './addproduct/addproduct.component';
     AppComponent,
     ProductComponent,
     DetailComponent,
-    AddimageComponent,
     AddproductComponent
   ],
   imports: [
     BrowserModule, HttpModule, FormsModule,
     RouterModule.forRoot([
-      { path : 'product', component : ProductComponent},
+      { path : '', component : ProductComponent},
       { path : 'detail', component : DetailComponent},
+      { path : 'add', component : AddproductComponent},
+
       
       
     ])

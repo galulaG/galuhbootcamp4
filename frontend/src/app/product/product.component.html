@@ -37,12 +37,48 @@
   </header>
   
   <!-- First Photo Grid-->
+  <div *ngFor="let p of units">
+  <!-- <div routerLink="{{p._id}}"> -->
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/w3images/mountains.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <img src="{{ p.profile }}" alt="Norway" style="width:100%" class="w3-hover-opacity">
       <div class="w3-container w3-white">
-        <p><b>AA jacket</b></p>
-        <p>Harga</p>
+        <p><b>{{ p.name }}</b></p>
+        <p>$: {{ p.price }}</p>
       </div>
     </div>
   </div>
+  <!-- </div> -->
+  </div>
+</div>
+
+
+<!-- <div id="list"class=" col-md-3" style="height:auto;text-align: center;"  *ngFor="let x of units">
+    <div routerLink="{{x._id}}">
+      <div class="centered" style="height: 200px; " >
+        <img class="img-responsive" style="max-width:80%;max-height:80%;" src="{{x.Gambar}}" alt="">
+      </div>
+      <h3>{{x.Nama}}</h3>
+      <p>IDR {{x.Harga}}</p>
+    </div>
+  </div> -->
+
+
+
+
+<!-- <form #f="ngForm" (ngSubmit)="addData(f)" action="" style="color:#bdbdbd; margin-bottom:100px;">
+     <label class="col-md-offset-3" for="">name</label> <br>
+     <input name="name" class="col-md-offset-3 col-md-6 noborder inputtype" type="text" ngModel><br><br>
+     
+     <label class="col-md-offset-3" for="">price</label> <br>
+     <input name="price" class="col-md-offset-3 col-md-6 noborder inputtype" type="number" ngModel><br><br>
+
+
+     <label class="col-md-offset-3" for="">profile</label> <br><br>
+     <input class="inputfile col-md-offset-3" id="profile"style="profile" name="profile" (change)="fileChange($event)" type="file" multiple > -->
+     
+     <!-- <label for="Gambar" >Choose a file</label> -->
+ 
+       <!-- <button class="col-md-offset-8">Cancel</button>
+       <button type="submit" >Submit</button>
+   </form> -->

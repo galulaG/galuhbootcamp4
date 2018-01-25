@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Http,RequestOptions,Headers} from "@angular/Http";
 import {Router} from "@angular/router";
-import{NgForm}from"@angular/forms";
+import {NgForm}from"@angular/forms";
 
 @Component({
   selector: 'app-addproduct',
@@ -23,7 +23,6 @@ export class AddproductComponent implements OnInit {
     this.file = $event.target.files[0];
     console.log(this.file);
   }
-
 
 
   upload(f : NgForm){
